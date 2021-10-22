@@ -1,0 +1,22 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://source.unsplash.com/random');">
+  <div class="container text-center">
+    <h1>Save you movies here ;)</h1>
+  </div>
+</div>
+
+<div class="container mt-3">
+  <h4>My Lists</h4>
+  <div class="container">
+    <div class="row mt-5">
+      <% @lists.each do |list| %>
+        <div class="col-4">
+          <div class="card-category mt-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/random')">
+            <%= list.name %>
+            <%= link_to "+", list_path(list), method: :delete, data: { confirm: "Are you sure?" }, class: "card-remove-link" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+

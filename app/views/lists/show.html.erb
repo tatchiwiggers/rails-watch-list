@@ -1,0 +1,18 @@
+<div class="container mt-5">
+  <h5><%= @list.name %></h5>
+  <% @list.movies.each do |movie| %>
+  <div class="row">
+    <div class="col-4">
+      <p><%= image_tag movie.poster_url, alt: movie.title, class: 'movie-img rounded-top' %></p>
+    </div>
+  </div>
+    <p><%= movie.title %></p>
+    <p><%= movie.overview %></p>
+    <p><%= movie.rating %></p>
+  <% end %>
+
+
+
+  <p><%= link_to 'Back to lists', root_path, class: 'btn btn-info' %></p>
+  <p><%= link_to 'Create a bookmark', new_list_bookmark_path(@list), class: 'btn btn-info' %></p>
+</div>
