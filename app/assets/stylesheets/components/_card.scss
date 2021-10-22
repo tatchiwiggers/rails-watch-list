@@ -7,11 +7,16 @@
   align-items: center;
   color: white;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: lighter;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   position: relative;
+    &:hover {
+    color: white;
+    text-decoration: none;
+    opacity: 1;
+  }
 }
 
 .card-remove-link {
@@ -31,6 +36,16 @@
   font-weight: lighter;
   &:hover {
     color: white;
+    text-decoration: none;
+    opacity: 1;
+  }
+}
+
+.genre {
+  color: white;
+  text-decoration: none;
+  &:hover {
+    color: lightgrey;
     text-decoration: none;
     opacity: 1;
   }
