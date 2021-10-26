@@ -70,15 +70,21 @@
 
 .card-actions {
   position: relative;
+  margin-top: 490px;
+  margin-right: 200px;
   background-color: #F6F6F6;
   border-top: 1px solid rgba(160,160,160,0.2);
-  padding: 16px 24px;
+  // padding: 16px 24px;
 }
 
 .card-image {
-  height: 50px;
+  height: 200px;
   background-position: center;
   background-size: cover;
   border-top: 1px solid rgba(160,160,160,0.2);
   padding: 16px 24px;
+}
+
+.text-danger {
+  margin-left: 150px;
 }
