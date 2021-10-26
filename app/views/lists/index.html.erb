@@ -1,6 +1,9 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://source.unsplash.com/random');">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://www.gotokyo.org/en/spot/565/images/565_0704_1_1400x1100.jpg');">
   <div class="container text-center">
-    <h1>Save you movies here ;)</h1>
+    <h1>Your personal movie repo!</h1>
+    <p>
+      <span id="banner-typed-text"></span>
+    </p>
   </div>
 </div>
 
@@ -10,9 +13,9 @@
   <div class="row mt-3">
     <% @lists.each do |list| %>
       <div class="col-4">
-        <div class="card-category mt-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/random')">
+        <div class="card-category mt-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : asset_path('popcorn.jpg') %>)">
+          <%= link_to "+", list, method: :delete, data: { confirm: "Are you sure?" }, class: "card-remove-link" %>
           <%= link_to list.name, list_path(list), class: 'genre' %>
-          <%#= link_to "+", list_path(list), method: :delete, data: { confirm: "Are you sure?" }, class: "card-remove-link" %>
         </div>
       </div>
     <% end %>

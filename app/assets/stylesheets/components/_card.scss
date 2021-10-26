@@ -50,3 +50,35 @@
     opacity: 1;
   }
 }
+
+.cards {
+  .col-4 {
+    display: flex;
+    flex-grow: 1;
+    .card {
+      background-color: #EEEEEE;
+      box-shadow: 0 5px 15px rgba(0,0,0,.2);
+      flex-grow: 1;
+      .card-body {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.card-actions {
+  position: relative;
+  background-color: #F6F6F6;
+  border-top: 1px solid rgba(160,160,160,0.2);
+  padding: 16px 24px;
+}
+
+.card-image {
+  height: 50px;
+  background-position: center;
+  background-size: cover;
+  border-top: 1px solid rgba(160,160,160,0.2);
+  padding: 16px 24px;
+}
