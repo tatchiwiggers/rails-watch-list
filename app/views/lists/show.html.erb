@@ -10,6 +10,7 @@
   <h5><%= @list.name %></h5>
   <div class="row cards">
     <% @list.movies.each do |movie| %>
+     <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
       <div class="col-4">
         <div class="card mb-2">
           <p><%= image_tag movie.poster_url, alt: movie.title, class: 'card-image' %></p>
@@ -18,7 +19,7 @@
             <h6 class="card-subtitle mb-2 text-muted"><%= movie.overview %></h6>
             <div>
               <i> Rating <%= movie.rating %></i>
-                 <%= link_to "Remove", list_bookmarks_path(@list.bookmarks),
+                 <%= link_to "Remove", bookmark_path(bookmark),
                       method: :delete, 
                       data: { confirm: "Are you sure you wanna delete this movie?" },
                       class: 'text-danger'
