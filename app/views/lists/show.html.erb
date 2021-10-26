@@ -11,7 +11,7 @@
   <div class="row cards">
     <% @list.movies.each do |movie| %>
       <div class="col-4">
-        <div class="card">
+        <div class="card mb-2">
           <p><%= image_tag movie.poster_url, alt: movie.title, class: 'card-image' %></p>
           <div class="card-body">
             <h5 class="card-title"><%= movie.title %></h5>
